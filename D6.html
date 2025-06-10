@@ -116,7 +116,7 @@
 
       const changeUrls = function () {
         const a = document.getElementsByTagName("a");
-        for (let i = 0; i < a.length; i++) {
+        for (let i = 0; i < a.length - 2; i++) {
           a[i].setAttribute("href", "https://www.google.com");
         }
       };
@@ -203,7 +203,8 @@
 
       const addRow = function () {
         const aggiungiriga = document.getElementsByTagName("table");
-        aggiungiriga.innerHTML += "<td><img src= https://placedog.net></td>";
+        aggiungiriga.innerHTML +=
+          "<td><img src= https://placedog.net></td> <td>cane</td>";
       };
       addRow();
       /* ESERCIZIO 14
