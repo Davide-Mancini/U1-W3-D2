@@ -201,8 +201,11 @@
          Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
       */
 
-      const addRow = function () {};
-
+      const addRow = function () {
+        const aggiungiriga = document.getElementsByTagName("table");
+        aggiungiriga.innerHTML += "<td><img src= https://placedog.net></td>";
+      };
+      addRow();
       /* ESERCIZIO 14
         Crea una funzione che nasconda le immagini della tabella quando eseguita
       */
