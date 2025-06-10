@@ -104,9 +104,9 @@
         */
 
       const changePcontent = function () {
-        const changePInDiv = document.querySelectorAll("div > p");
+        const changePInDiv = document.querySelectorAll("div > p")[0];
 
-        changePInDiv.textContent = " nuovi p in div";
+        changePInDiv.innerHTML += " <p>nuovi p in div</p>";
       };
 
       changePcontent();
@@ -139,7 +139,8 @@
 
       const addParagraph = function () {
         const p = document.querySelectorAll("body > div")[0];
-        p.innerHTML += "prova prova";
+
+        p.innerHTML += "<p>prova prova</p>";
       };
       addParagraph();
       /* ESERCIZIO 7
@@ -168,7 +169,8 @@
         */
 
       const makeItClickable = function () {
-        const rimuovi = document.getElementsByTagName("h1");
+        const rimuovi = document.getElementsByTagName("h1")[0];
+        rimuovi.innerHTML.slice(0, -1);
       };
 
       /* ESERCIZIO 10
