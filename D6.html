@@ -170,7 +170,9 @@
 
       const makeItClickable = function () {
         const rimuovi = document.getElementsByTagName("h1")[0];
-        rimuovi.innerHTML.slice(0, -1);
+        // alert("prova onclick");
+        let rimozione = rimuovi.textContent.slice(1, -1);
+        rimozione += rimuovi;
       };
 
       /* ESERCIZIO 10
@@ -187,7 +189,13 @@
          La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
       */
 
-      const generateTable = function () {};
+      const generateTable = function () {
+        const spaziotabella = document.getElementById("tableArea");
+        spaziotabella.innerHTML +=
+          "<table> <th>immagine</th> <th>nome prodotto</th> <th>quantità</th> <th> prezzo</th></table>";
+        spaziotabella.style.border = "1px,solid,red";
+      };
+      generateTable();
 
       /* ESERCIZIO 12
          Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
