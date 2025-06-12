@@ -104,9 +104,11 @@
         */
 
       const changePcontent = function () {
-        const changePInDiv = document.querySelectorAll("div > p")[0];
-
-        changePInDiv.innerHTML += " <p>nuovi p in div</p>";
+        const changePInDiv = document.querySelectorAll("div  p");
+        for (let i = 0; i < changePInDiv.length; i++) {
+          changePInDiv[i].innerHTML = "prova prova";
+          changePInDiv.innerHTML += " <p>nuovi p in div</p>";
+        }
       };
 
       changePcontent();
@@ -138,9 +140,9 @@
       */
 
       const addParagraph = function () {
-        const p = document.querySelectorAll("body > div")[0];
+        const p = document.querySelectorAll("div");
 
-        p.innerHTML += "<p>prova prova</p>";
+        p[0].innerHTML += "<p>prova prova</p>";
       };
       addParagraph();
       /* ESERCIZIO 7
@@ -171,8 +173,7 @@
       const makeItClickable = function () {
         const rimuovi = document.getElementsByTagName("h1")[0];
         // alert("prova onclick");
-        let rimozione = rimuovi.textContent.slice(1, -1);
-        rimozione += rimuovi;
+        rimuovi.innerHTML = rimuovi.innerHTML.slice(0, -1);
       };
 
       /* ESERCIZIO 10
@@ -191,8 +192,8 @@
 
       const generateTable = function () {
         const spaziotabella = document.getElementById("tableArea");
-        spaziotabella.innerHTML +=
-          "<table> <th>immagine</th> <th>nome prodotto</th> <th>quantità</th> <th> prezzo</th></table>";
+        spaziotabella.innerHTML += `<table>
+             <th><td>immagine</td></th> <th><td>nome prodotto</td></th> <th><td>quantità</td></th> <th> <td>prezzo</td></th></table>`;
         spaziotabella.style.border = "1px,solid,red";
       };
       generateTable();
@@ -202,9 +203,9 @@
       */
 
       const addRow = function () {
-        const aggiungiriga = document.getElementsByTagName("table");
+        const aggiungiriga = document.getElementsByTagName("# tableArea table");
         aggiungiriga.innerHTML +=
-          "<td><img src= https://placedog.net></td> <td>cane</td>";
+          "<tr><td><img src= https://placedog.net></td> <td>cane</td></tr>";
       };
       addRow();
       /* ESERCIZIO 14
